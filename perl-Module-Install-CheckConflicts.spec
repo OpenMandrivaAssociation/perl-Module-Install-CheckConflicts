@@ -1,15 +1,13 @@
 %define upstream_name    Module-Install-CheckConflicts
-%define upstream_version 0.02
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.02
+Release:	7
 
 Summary:	Notify users of possible conflicts with the distribution they're installing
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Module-Install-CheckConflicts
-Source0:	https://cpan.metacpan.org/authors/id/F/FL/FLORA/Module-Install-CheckConflicts-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/F/FL/FLORA/Module-Install-CheckConflicts-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -30,7 +28,7 @@ explaining the situation and a list of additional modules he needs to
 upgrade will presented.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
